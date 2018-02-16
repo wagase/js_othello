@@ -1,0 +1,54 @@
+﻿<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;  charset=UTF-8" />
+		<title>othello</title>
+		<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="./script.js"></script>
+	</head>
+<body>
+	<div id="template" style="display:none">
+		<div id="cell" style="position:absolute;width:32px;height:32px;background-color:#0e0;border:1px solid #000;"></div>
+		<div id="white" style="position:absolute;width:30px;height:30px;background-color:#fff;border:1px solid #000;border-radius: 20px; "></div>
+		<div id="black" style="position:absolute;width:30px;height:30px;background-color:#000;border:1px solid #000;border-radius: 20px; "></div>
+		<div id="num" style="position:absolute;width:30px;height:30px;text-align: center;top: 8px;bottom: 0;left: 0;right: 0;margin: auto;">x</div>
+	</div>
+	<div id="info">黒の手番です</div>
+	<input type="button" id="continue" value="もう一度遊ぶ" style="position:relative;display:none;" />
+	<div>
+		<label><input type="checkbox" id="hint" value="1">ヒントモード</label>
+		<label><input type="checkbox" id="release" value="3">解放度の表示</label>
+	</div>
+	<div>
+		<label><input type="checkbox" id="vsCom" value="4">COM1対戦する</label>
+		<label><input type="radio" name="turn" id="turnB" value="1">黒</label>
+		<label><input type="radio" name="turn" id="turnW" value="2" checked="checked">白</label>
+	</div>
+	<div>
+		COM1のレベル
+		<label><input type="radio" name="Level" id="Level1" value="1" checked="checked">1</label>
+		<label><input type="radio" name="Level" id="Level2" value="2">2</label>
+		<label><input type="radio" name="Level" id="Level3" value="3">3</label>
+		<label><input type="radio" name="Level" id="Level4" value="4">4</label>
+		<label><input type="radio" name="Level" id="Level5" value="5">5</label>
+	</div>
+	<div>
+		<label><input type="checkbox" id="vsCom2" value="4">COM2対戦する</label>
+		<label><input type="radio" name="turn2" id="turn2B" value="1" checked="checked">黒</label>
+		<label><input type="radio" name="turn2" id="turn2W" value="2">白</label>
+	</div>
+	<div>
+		COM2のレベル
+		<label><input type="radio" name="Level2" id="Level2_1" value="1" checked="checked">1</label>
+		<label><input type="radio" name="Level2" id="Level2_2" value="2">2</label>
+		<label><input type="radio" name="Level2" id="Level2_3" value="3">3</label>
+		<label><input type="radio" name="Level2" id="Level2_4" value="4">4</label>
+		<label><input type="radio" name="Level2" id="Level2_5" value="5">5</label>
+	</div>
+	<div>
+		<label><input type="checkbox" id="autoPass" value="2">自動パス</label>
+	</div>
+	<input type="button" id="pass" value="PASS" style="position:relative" />
+	<span id="alert"></span>
+	<div style="position:relative;" id="main"></div>
+</body>
+</html>
